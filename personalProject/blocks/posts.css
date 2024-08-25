@@ -1,0 +1,44 @@
+.posts {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.posts__nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 1;
+    padding: 10px;
+    margin: 10px 300px 0;
+    border-bottom: 3px solid rgba(33, 33, 33, 1);
+}
+
+.posts__home-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.posts__home-btn:hover {
+    background: rgba(250, 172, 15, 1);
+}
+
+.posts__about-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.posts__about-btn:hover {
+    background: rgba(250, 172, 15, 1);
+
+}
