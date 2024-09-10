@@ -1,17 +1,15 @@
-// use setAttribute to change visibility of pages
-// try title.classList.toggle("article__title_theme_dark"); structure
-
-// for adding posts, use a <template> then insertAdjacentHTML()
-
 const postContent = document.querySelector(".homeContent");
 const contentHomeBtn = postContent.querySelector(".posts__home-btn");
 const cardsContent = postContent.querySelector(".cards");
 
-console.log(cardsContent.classList);
-
-function openToggle() {
+function mainToggle() {
     cardsContent.classList.toggle("VisToggle");
-    console.log("works");
 }
+contentHomeBtn.addEventListener("click", mainToggle);
 
-contentHomeBtn.addEventListener("click", openToggle);
+function menuToggle() {
+    menu.classList.toggle("VisToggle");
+}
+const menuBtn = document.querySelector(".header__menu");
+const menu = document.querySelector(".header__drop");
+menuBtn.addEventListener("click", menuToggle);

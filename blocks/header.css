@@ -24,3 +24,14 @@
 .header__menu:hover {
     opacity: 1;
 }
+
+.header__drop {
+    position: absolute;
+    right: 30px;
+    margin-top: 10px;
+    background-color: rgb(148, 148, 226);
+}
+
+.first-h:hover {
+    background-color: red;
+}

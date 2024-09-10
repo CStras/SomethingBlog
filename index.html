@@ -16,9 +16,23 @@
 
         <header class="header">
             <h1 class="header__title">THE SOMETHING BLOG</h1>
-            <img class="header__menu" src="./images/menu-dots-svgrepo-com.svg">
+            <div class="header__drop-menu">
+                <img class="header__menu" src="./images/menu-dots-svgrepo-com.svg">
+                <div class="header__drop VisToggle">
+                    <h2 class="first-h">asdfasdf</h2>
+                    <h2>asdfasdf</h2>
+                    <h2>asdfasdf</h2>
+                </div>
+            </div>
         </header>
 
+        <!-- <div class="post-submit">
+            <div class="post__container">
+                <button class="post__close-btn"></button>
+                <h2>New Post</h2>
+            </div>
+        </div> //going to readjust positioning by reviewing previous cert content
+    -->
         <main class="homeContent">
             <section class="posts page__section">
                 <nav class="posts__nav">
@@ -46,6 +60,18 @@
         </main>
 
     </div>
+
+
+
+    <template id="card-template">
+        <div class="card">
+            <div class="card__content">
+                <h2 class="card__title"></h2>
+                <p class="card__description"></p>
+            </div>
+            <img class="card__img" src="">
+        </div>
+    </template>
 
     <script src="./scripts/index.js"></script>
 </body>
