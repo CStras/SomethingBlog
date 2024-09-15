@@ -6,7 +6,11 @@ As I learn new features and functionalities, I plan to create posts about them a
 Link: https://cstras.github.io/SomethingBlog/
 
 Current goal: 
+
   -Add HTML and CSS features such as animations and keyframes.
+  
   -Create add post button/function (DONE)
+  
   -Create security function so that visitors of the site will not be able to add posts.
+  
   -Set up database to save posts
