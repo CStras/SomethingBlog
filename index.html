@@ -27,13 +27,6 @@
             </div>
         </header>
 
-        <!-- <div class="post-submit">
-            <div class="post__container">
-                <button class="post__close-btn"></button>
-                <h2>New Post</h2>
-            </div>
-        </div> //going to readjust positioning by reviewing previous cert content
-    -->
         <main class="homeContent">
             <section class="posts page__section">
                 <nav class="posts__nav">
@@ -42,6 +35,7 @@
                 </nav>
 
                 <section class="cards">
+                    <img class="cards__image" id="add-post-btn" src="../images/add-btn.svg">
                     <div class="card">
                         <div class="card__content">
                             <h2 class="card__title">title</h2>
@@ -60,7 +54,38 @@
 
         </main>
 
+        <div class="modal" id="add-card-modal">
+            <div class="modal__container">
+                <button id="add-close-btn" class="modal__close-btn" type="submit"></button>
+                <h2 class="modal__title">New Post</h2>
+                <form name="edit-profile" class="modal__form">
+
+                    <label for="add-card-link-input" class="modal__label">
+                        Image link
+                        <input type="url" id="add-card-link-input" class="modal__input"
+                            placeholder="Paste a link to the picture" name="link">
+                    </label>
+
+                    <label for="add-card-title-input" class="modal__label">
+                        Title
+                        <input type="text" id="add-card-name-input" class="modal__input" placeholder="Type your title"
+                            name="title">
+                    </label>
+
+                    <label for="add-card-name-input" class="modal__label">
+                        Caption
+                        <input type="text" id="add-card-name-input" class="modal__input" placeholder="Type your caption"
+                            name="caption">
+                    </label>
+
+                    <button class="modal__submit-btn" type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+
     </div>
+
+
 
 
 

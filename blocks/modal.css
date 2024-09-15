@@ -1,0 +1,101 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(33, 33, 33, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    transition: visibility 0s linear 0.6s, opacity 0.6s linear;
+    padding: 0 20px;
+    opacity: 0;
+}
+
+.modal_opened {
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+.modal__container {
+    background-color: rgb(255, 243, 224);
+    max-width: 730px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 32px 50px;
+    position: relative;
+    border-radius: 10px;
+    border: 2px solid rgba(33, 33, 33, 1);
+}
+
+.modal__close-btn {
+    position: absolute;
+    border: none;
+    background-color: transparent;
+    opacity: 1;
+    top: 32px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/X.svg");
+    padding: 0;
+}
+
+.modal__close-btn:hover {
+    opacity: 0.4;
+}
+
+.modal__title {
+    margin: 0 0 32px 0;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1;
+}
+
+.modal__label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 32px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 17.6px;
+    color: rgba(33, 33, 33, 0.7);
+}
+
+.modal__input {
+    padding: 16px 12px;
+    border: 1px solid rgba(33, 33, 33, 0.4);
+    border-radius: 8px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.modal__input:hover {
+    border: 1px solid rgba(33, 33, 33, 1);
+}
+
+.modal__submit-btn {
+    width: 156px;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    padding: 18px 58px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    opacity: 1;
+}
+
+.modal__submit-btn:hover {
+    opacity: 0.6;
+}
