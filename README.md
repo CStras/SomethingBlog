@@ -1,11 +1,13 @@
 -- The Something Blog --
 
-- This website is a personal site of mine (Colin Strasser). The goal with this website is to include almost all markup and programming features that I learn about during my career as a software engineer.
+- This website is a personal site of mine. The goal with this website is to include almost all markup and programming features that I learn about during my career as a software engineer.
 As I learn new features and functionalities, I plan to create posts about them and my thoughts and experience with them.
 
 Link: https://cstras.github.io/SomethingBlog/
 
-Current goal: 
+Current goal: __Total React Reformat!__
+
+Goals:
 
   -Add HTML and CSS features such as animations and keyframes.
   
