@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite --open",
+    "serv": "nodemon app.js",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
@@ -30,8 +31,9 @@
     "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^5.0.0",
     "eslint-plugin-react-refresh": "^0.4.16",
-    "globals": "^15.13.0",
     "gh-pages": "^6.2.0",
+    "globals": "^15.13.0",
+    "nodemon": "^3.1.9",
     "vite": "^6.0.3"
   }
 }

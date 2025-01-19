@@ -1,4 +1,4 @@
-/*const express = require("express");
+const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const mainRouter = require("./routes/index");
@@ -17,4 +17,3 @@ app.use("/", mainRouter);
 app.listen(PORT, () => {
   console.log(`running on port ${PORT}`);
 });
-*/
