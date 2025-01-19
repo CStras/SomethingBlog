@@ -1,8 +1,18 @@
-# React + Vite
+-- The Something Blog --
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This website is a personal site of mine. The goal with this website is to include almost all markup and programming features that I learn about during my career as a software engineer. As I learn new features and functionalities, I plan to create posts about them and my thoughts and experience with them.
+Link: https://cstras.github.io/SomethingBlog/
 
-Currently, two official plugins are available:
+Current goal:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Goals: Add routes /home /about and /profile and routing to them
+
+-Total React Reformat! (DONE)
+
+-Add HTML and CSS features such as animations and keyframes.
+
+-Create add post button/function (DONE)
+
+-Create security function so that visitors of the site will not be able to add posts.
+
+-Set up database to save posts

@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./NavBar.css";
 import menu from "../../assets/menu-dots-svgrepo-com.svg";
 
 function Header() {
