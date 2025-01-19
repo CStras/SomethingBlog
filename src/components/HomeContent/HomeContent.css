@@ -1,9 +1,3 @@
-.posts {
-    padding-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
 .posts__nav {
     display: flex;
     justify-content: center;

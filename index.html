@@ -1,106 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Colin Strasser">
-    <meta name="keywords" content="Colin, Strasser, Blog, ">
-    <meta name="description" content="Colin Strasser's personal blog">
-    <link rel="stylesheet" href="./pages/index.css">
-    <title>StngBlog</title>
-</head>
-
-<body>
-    <div class="page">
-
-        <header class="header">
-            <h1 class="header__title">THE SOMETHING BLOG</h1>
-            <h2>CURRENTLY IN DEVELOPMENT: REFACTORING TO REACT FRAMEWORK </h2>
-            <div class="header__drop-menu">
-                <img class="header__menu" src="./images/menu-dots-svgrepo-com.svg">
-                <div class="header__drop header__drop-b4 VisToggle">
-                    <div class="drop__circle drop__circle-b4"></div>
-                    <h2 class="first-h">asdfasdf</h2>
-                    <h2>asdfasdfasdfafsdasdf</h2>
-                    <h2>asdfasdf</h2>
-                </div>
-            </div>
-        </header>
-
-        <main class="homeContent">
-            <section class="posts page__section">
-                <nav class="posts__nav">
-                    <button type="button" class="posts__home-btn">Home</button>
-                    <button type="button" class="posts__about-btn">About</button>
-                </nav>
-
-                <section class="cards">
-                    <img class="cards__image" id="add-post-btn" src="./images/add-btn.svg">
-                    <div class="card">
-                        <div class="card__content">
-                            <h2 class="card__title">title</h2>
-                            <p class="card__description">description and contentdescription and contentdescription and
-                                contentdescription and contentdescription and contentdescription and contentdescription
-                                and contentdescription and contentdescription and contentdescription and
-                                contentdescription and contentdescription and contentdescription and contentdescription
-                                and contentdescription and contentdescription and contentdescription and
-                                contentdescription and contentdescription and contentdescription and contentdescription
-                                and content</p>
-                        </div>
-                        <img class="card__img" src="./images/istockphoto-1149282247-1024x1024.jpg">
-                    </div>
-                </section>
-            </section>
-
-        </main>
-
-        <div class="modal" id="add-card-modal">
-            <div class="modal__container">
-                <button id="add-post-close-btn" class="modal__close-btn" type="submit"></button>
-                <h2 class="modal__title">New Post</h2>
-                <form name="edit-profile" class="modal__form">
-
-                    <label for="add-card-link-input" class="modal__label">
-                        Image link
-                        <input type="url" id="add-card-link-input" class="modal__input"
-                            placeholder="Paste a link to the picture" name="link">
-                    </label>
-
-                    <label for="add-card-title-input" class="modal__label">
-                        Title
-                        <input type="text" id="add-card-title-input" class="modal__input" placeholder="Type your title"
-                            name="title">
-                    </label>
-
-                    <label for="add-card-name-input" class="modal__label">
-                        Caption
-                        <input type="text" id="add-card-name-input" class="modal__input" placeholder="Type your caption"
-                            name="caption">
-                    </label>
-
-                    <button class="modal__submit-btn" type="submit">Save</button>
-                </form>
-            </div>
-        </div>
-
-    </div>
-
-
-
-
-
-    <template id="card-template">
-        <div class="card">
-            <div class="card__content">
-                <h2 class="card__title"></h2>
-                <p class="card__description"></p>
-            </div>
-            <img class="card__img" src="">
-        </div>
-    </template>
-
-    <script src="./scripts/index.js"></script>
-</body>
-
+ <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/assets/orange.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Something Blog</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
 </html>

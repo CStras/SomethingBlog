@@ -1,3 +1,26 @@
+.homeContent {
+    padding: 0 20px;
+    display: flex;
+}
+
+.VisToggle {
+    visibility: hidden;
+}
+
+.posts {
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+
 .cards {
     display: flex;
     flex-direction: column;
