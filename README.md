@@ -3,9 +3,9 @@
 This website is a personal site of mine. The goal with this website is to include almost all markup and programming features that I learn about during my career as a software engineer. As I learn new features and functionalities, I plan to create posts about them and my thoughts and experience with them.
 Link: https://cstras.github.io/SomethingBlog/
 
-Current goal:
+Current goal: Add routes /home /about and /profile and routing to them
 
-Goals: Add routes /home /about and /profile and routing to them
+Goals:
 
 -Total React Reformat! (DONE)
 
