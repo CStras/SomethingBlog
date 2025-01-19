@@ -8,15 +8,15 @@ function Main() {
   return (
     <>
       <NavBar />
-      <main class="homeContent">
-        <section class="posts page__section">
+      <main className="homeContent">
+        <section className="posts page__section">
           <HomeContent />
-          <section class="cards">
-            <img class="cards__image" id="add-post-btn" src={add} />
-            <div class="card">
-              <div class="card__content">
-                <h2 class="card__title">title</h2>
-                <p class="card__description">
+          <section className="cards">
+            <img className="cards__image" id="add-post-btn" src={add} />
+            <div className="card">
+              <div className="card__content">
+                <h2 className="card__title">title</h2>
+                <p className="card__description">
                   description and contentdescription and contentdescription and
                   contentdescription and contentdescription and
                   contentdescription and contentdescription and
@@ -29,7 +29,7 @@ function Main() {
                   contentdescription and contentdescription and content
                 </p>
               </div>
-              <img class="card__img" src={stock} />
+              <img className="card__img" src={stock} />
             </div>
           </section>
         </section>

@@ -2,11 +2,11 @@ import "./HomeContent.css";
 
 function HomeContent() {
   return (
-    <nav class="posts__nav">
-      <button type="button" class="posts__home-btn">
+    <nav className="posts__nav">
+      <button type="button" className="posts__home-btn">
         Home
       </button>
-      <button type="button" class="posts__about-btn">
+      <button type="button" className="posts__about-btn">
         About
       </button>
     </nav>
