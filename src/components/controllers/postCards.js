@@ -13,7 +13,7 @@ const getAllCards = (req, res) => {
 const createCard = (req, res) => {
   const { title, content, imageUrl, author } = req.body; // this is when the card is submitted
   const owner = req.user._id;
-  Item.create({ name, weather, imageUrl, owner })
+  Item.create({ title, content, imageUrl, owner, author })
     .then((item) => {
       res.status(REQUEST_CREATED).send(item);
     })
@@ -26,3 +26,5 @@ const createCard = (req, res) => {
         .send({ message: "An error has occurred on the server" });
     });
 };
+
+module.exports = { createCard, getAllCards };

@@ -1,27 +1,44 @@
 import "./PostCard.css";
 import stock from "../../assets/istockphoto-1149282247-1024x1024.jpg";
+import HomeContent from "../HomeContent/HomeContent";
+import NavBar from "../NavBar/NavBar";
+import add from "../../assets/add-btn.svg";
 
 function PostCard() {
   return (
-    <div className="card">
-      <div className="card__content">
-        <div className="card__title_section">
-          <h2 className="card__title">My favorite fruit</h2>
-          <h3 className="card__author">Colin Strasser</h3>
-        </div>
-        <p className="card__description">
-          description and contentdescription and contentdescription and
-          contentdescription and contentdescription and contentdescription and
-          contentdescription and contentdescription and contentdescription and
-          contentdescription and contentdescription and contentdescription and
-          contentdescription and contentdescription and contentdescription and
-          contentdescription and contentdescription and contentdescription and
-          contentdescription and contentdescription and contentdescription and
-          content
-        </p>
-      </div>
-      <img className="card__img" src={stock} />
-    </div>
+    <>
+      <NavBar />
+      <HomeContent />
+      <main className="content">
+        <section className="posts page__section">
+          <section className="cards">
+            <img className="cards__add-post-btn" id="add-post-btn" src={add} />
+
+            <div className="card">
+              <div className="card__content">
+                <div className="card__title_section">
+                  <h2 className="card__title">My favorite fruit</h2>
+                  <h3 className="card__author">Colin Strasser</h3>
+                </div>
+                <p className="card__description">
+                  description and contentdescription and contentdescription and
+                  contentdescription and contentdescription and
+                  contentdescription and contentdescription and
+                  contentdescription and contentdescription and
+                  contentdescription and contentdescription and
+                  contentdescription and contentdescription and
+                  contentdescription and contentdescription and
+                  contentdescription and contentdescription and
+                  contentdescription and contentdescription and
+                  contentdescription and contentdescription and content
+                </p>
+              </div>
+              <img className="card__img" src={stock} />
+            </div>
+          </section>
+        </section>
+      </main>
+    </>
   );
 }
 

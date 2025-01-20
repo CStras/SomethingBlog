@@ -1,7 +1,7 @@
 import "./NavBar.css";
 import menu from "../../assets/menu-dots-svgrepo-com.svg";
 
-function Header() {
+function NavBar() {
   return (
     <header className="header">
       <h1 className="header__title">THE SOMETHING BLOG</h1>
@@ -18,4 +18,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default NavBar;
