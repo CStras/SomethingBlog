@@ -9,12 +9,8 @@ Goals:
 
 -Total React Reformat! (DONE)
 
--Add HTML and CSS features such as animations and keyframes.
+-Add routes tab (home, about, projects)
 
--Add routes /home /about and /profile and routing to them
+-Set up backend for posts library and user data
 
--Create add post button/function (DONE)
-
--Create security function so that visitors of the site will not be able to add posts.
-
--Set up database to save posts
+-Add user interactions. Likes, comments, reactions, etc
