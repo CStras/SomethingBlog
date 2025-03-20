@@ -1,0 +1,66 @@
+.header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(235, 207, 169, 1);
+    border-bottom: 3px solid rgba(33, 33, 33, 0.8);
+}
+
+.Vistoggle {
+    display: none;
+}
+
+.header__title {
+    margin: 0;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1;
+}
+
+.header__profile-login {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgba(33, 33, 33, 0.8);
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.header__profile-signup-btn {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.header__profile-logout {
+    display: flex;
+    align-items: center;
+    background-color: rgba(33, 33, 33, 1);
+    border-radius: 20px;
+    padding: 5px;
+    cursor: pointer;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.header__profile-signout-btn {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 5px;
+    background-color: rgba(33, 33, 33, 1);
+    color: rgba(235, 207, 169, 1);
+    border: none;
+    padding: 0;
+}
+
+.header__profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}

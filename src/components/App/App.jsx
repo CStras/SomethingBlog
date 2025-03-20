@@ -7,31 +7,18 @@ import About from "../About/About";
 import PostCard from "../PostCard/PostCard";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   return (
     <div className="page">
       <AppContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
         <Routes>
-          <Route path="/" element={<PostCard />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/" element={<PostCard isLoggedIn={isLoggedIn} />} />
+          <Route path="/about" element={<About isLoggedIn={isLoggedIn} />} />
         </Routes>
       </AppContext.Provider>
     </div>
   );
 }
-
-/* 
-          <Route
-            path="*"
-            element={
-              isLoggedIn ? (
-                <Navigate to="/" replace />
-              ) : (
-                <Navigate to="/login" replace />
-              )
-            }
-          /> 
-*/
 
 export default App;

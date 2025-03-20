@@ -1,11 +1,11 @@
 import "./About.css";
-import HomeContent from "../HomeContent/HomeContent";
-import NavBar from "../NavBar/NavBar";
+import HomeContent from "../Nav/Nav";
+import HeaderNav from "../HeaderNav/HeaderNav";
 
 function About() {
   return (
     <>
-      <NavBar />
+      <HeaderNav />
       <HomeContent />
       <div className="about">
         <h1 className="about__title">About Me</h1>

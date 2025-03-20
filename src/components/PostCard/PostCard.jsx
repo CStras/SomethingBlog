@@ -1,13 +1,13 @@
 import "./PostCard.css";
 import stock from "../../assets/istockphoto-1149282247-1024x1024.jpg";
-import HomeContent from "../HomeContent/HomeContent";
-import NavBar from "../NavBar/NavBar";
+import HomeContent from "../Nav/Nav";
+import HeaderNav from "../HeaderNav/HeaderNav";
 import add from "../../assets/add-btn.svg";
 
-function PostCard() {
+function PostCard({ isLoggedIn }) {
   return (
     <>
-      <NavBar />
+      <HeaderNav isLoggedIn={isLoggedIn} />
       <HomeContent />
       <main className="content">
         <section className="posts page__section">
