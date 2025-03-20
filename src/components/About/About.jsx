@@ -1,12 +1,12 @@
 import "./About.css";
-import HomeContent from "../Nav/Nav";
+import Nav from "../Nav/Nav";
 import HeaderNav from "../HeaderNav/HeaderNav";
 
 function About() {
   return (
     <>
       <HeaderNav />
-      <HomeContent />
+      <Nav />
       <div className="about">
         <h1 className="about__title">About Me</h1>
         <p className="about__description">

@@ -1,6 +1,6 @@
 import "./PostCard.css";
 import stock from "../../assets/istockphoto-1149282247-1024x1024.jpg";
-import HomeContent from "../Nav/Nav";
+import Nav from "../Nav/Nav";
 import HeaderNav from "../HeaderNav/HeaderNav";
 import add from "../../assets/add-btn.svg";
 
@@ -8,7 +8,7 @@ function PostCard({ isLoggedIn }) {
   return (
     <>
       <HeaderNav isLoggedIn={isLoggedIn} />
-      <HomeContent />
+      <Nav />
       <main className="content">
         <section className="posts page__section">
           <section className="cards">

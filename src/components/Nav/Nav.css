@@ -2,13 +2,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 60px;
+
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 23px;
     line-height: 1;
+    margin: 10px auto 0;
+
+}
+
+.posts__nav-links {
+    display: flex;
+    gap: 60px;
     padding: 10px;
-    margin: 10px 300px 0;
     border-bottom: 3px solid rgba(33, 33, 33, 1);
 }
 
@@ -35,4 +41,37 @@
 .posts__about-btn:hover {
     background: rgba(250, 172, 15, 1);
 
+}
+
+@media screen and (max-width: 850px) {
+
+    .posts__nav {
+        flex-direction: column;
+        border: none;
+        gap: 20px;
+    }
+
+    .posts__about-link {
+        border-radius: 0;
+        border-bottom: 3px solid rgba(33, 33, 33, 1);
+    }
+
+    .posts__about-link:hover {
+        animation: borderGap 2s linear 0.5s 1s alternate;
+    }
+    
+    .posts__home-link {
+        border-radius: 0;
+        border-bottom: 3px solid rgba(33, 33, 33, 1);
+    }
+
+}
+
+@keyframes borderGap {
+    0% {
+        border-bottom: 3px solid rgba(33, 33, 33, 1);
+    }
+    100% {
+        border-bottom: 3px solid rgba(33, 33, 33, 0);
+    }
 }

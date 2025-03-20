@@ -17,7 +17,7 @@ function HeaderNav({ isLoggedIn }) {
         </div>
       )}
       {isLoggedIn && (
-        <div>
+        <div className="header__profile">
           <img className="header__profile-img" src={profile}></img>
           <div className="header__profile-logout">
             <button onClick={onclick} className="header__profile-signout-btn">
