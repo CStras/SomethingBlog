@@ -2,7 +2,12 @@ import "./HeaderNav.css";
 import profile from "../../assets/default-profile.png";
 import { Link } from "react-router-dom";
 
-function HeaderNav({ isLoggedIn, handleSignIn, handleSignOut }) {
+function HeaderNav({
+  isLoggedIn,
+  handleSignIn,
+  handleSignOut,
+  handleLoginClick,
+}) {
   return (
     <header className="header">
       <Link to="/" className="header__title-link">
@@ -10,7 +15,10 @@ function HeaderNav({ isLoggedIn, handleSignIn, handleSignOut }) {
       </Link>
       {!isLoggedIn && (
         <div className="header__profile-login">
-          <button onClick={handleSignIn} className="header__profile-signup-btn">
+          <button
+            onClick={handleLoginClick}
+            className="header__profile-signup-btn"
+          >
             Sign in
           </button>
         </div>

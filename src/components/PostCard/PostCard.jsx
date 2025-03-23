@@ -4,19 +4,33 @@ import Nav from "../Nav/Nav";
 import HeaderNav from "../HeaderNav/HeaderNav";
 import add from "../../assets/add-btn.svg";
 
-function PostCard({ isLoggedIn, handleSignIn, handleSignOut }) {
+function PostCard({
+  isLoggedIn,
+  handleSignIn,
+  handleSignOut,
+  handleLoginClick,
+  handlePostClick,
+}) {
   return (
     <>
       <HeaderNav
         isLoggedIn={isLoggedIn}
         handleSignIn={handleSignIn}
         handleSignOut={handleSignOut}
+        handleLoginClick={handleLoginClick}
       />
       <Nav />
       <main className="content">
         <section className="posts page__section">
           <section className="cards">
-            <img className="cards__add-post-btn" id="add-post-btn" src={add} />
+            <div className="cards__add-post-btn-container">
+              <img
+                onClick={handlePostClick}
+                className="cards__add-post-btn"
+                id="add-post-btn"
+                src={add}
+              />
+            </div>
 
             <div className="card">
               <div className="card__content">
