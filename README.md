@@ -11,7 +11,9 @@ Goals:
 
 -Total React Reformat! (DONE)
 
--Add routes tab (home, about, projects, recipes)
+-Add routes tab (home, about, projects, recipes) (DONE)
+
+-Add modals for viewing full posts and adding posts. 
 
 -Set up backend for posts library and user data
 
