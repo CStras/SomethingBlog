@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
+    caret-color: transparent;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 23px;
@@ -18,51 +18,37 @@
     border-bottom: 3px solid rgba(33, 33, 33, 1);
 }
 
-.posts__home-btn {
+.posts__link {
     background: transparent;
     border: none;
     padding: 0;
     border-radius: 5px;
     padding: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(33, 33, 33, 1);
 }
 
-.posts__home-btn:hover {
+.posts__link:hover {
     background: rgba(250, 172, 15, 1);
-}
-
-.posts__about-btn {
-    background: transparent;
-    border: none;
-    padding: 0;
-    border-radius: 5px;
-    padding: 3px;
-}
-
-.posts__about-btn:hover {
-    background: rgba(250, 172, 15, 1);
-
 }
 
 @media screen and (max-width: 850px) {
 
-    .posts__nav {
+    .posts__nav-links {
         flex-direction: column;
         border: none;
         gap: 20px;
     }
 
-    .posts__about-link {
+    .posts__link {
+        margin: 0 auto;
         border-radius: 0;
         border-bottom: 3px solid rgba(33, 33, 33, 1);
     }
 
-    .posts__about-link:hover {
+    .posts__nav-link:hover {
         animation: borderGap 2s linear 0.5s 1s alternate;
-    }
-    
-    .posts__home-link {
-        border-radius: 0;
-        border-bottom: 3px solid rgba(33, 33, 33, 1);
     }
 
 }
@@ -72,6 +58,6 @@
         border-bottom: 3px solid rgba(33, 33, 33, 1);
     }
     100% {
-        border-bottom: 3px solid rgba(33, 33, 33, 0);
+        border-bottom: 3px solid rgb(93, 204, 112);
     }
 }

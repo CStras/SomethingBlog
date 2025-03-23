@@ -11,17 +11,32 @@
     display: none;
 }
 
+.header__title-link {
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 15px;
+}
+
 .header__title {
     margin: 0;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 500;
     font-size: 38px;
     line-height: 1;
+    caret-color: transparent;
+    cursor: pointer;
+    text-decoration: none;
+    color: rgba(33, 33, 33, 1);
+}
+
+.header__title-link:active {
+    background: rgba(250, 172, 15, 1);
 }
 
 .header__profile {
     display: flex;
     align-items: center;
+    caret-color: transparent;
 }
 
 .header__profile-login {
@@ -31,11 +46,11 @@
     border-radius: 20px;
     padding: 5px;
     cursor: pointer;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 .header__profile-signup-btn {
     font-size: 18px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 600;
     margin: 5px;
     padding: 0;
@@ -46,15 +61,16 @@
 .header__profile-logout {
     display: flex;
     align-items: center;
+    border: 2px solid rgba(33, 33, 33, 0.8);
     background-color: rgba(33, 33, 33, 1);
     border-radius: 20px;
     padding: 5px;
     cursor: pointer;
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 .header__profile-signout-btn {
     font-size: 18px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
     font-weight: 600;
     margin: 5px;
     background-color: rgba(33, 33, 33, 1);

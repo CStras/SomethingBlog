@@ -1,6 +1,7 @@
 .content {
     padding: 0 20px;
     display: flex;
+    caret-color: transparent;
 }
 
 .VisToggle {

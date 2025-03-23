@@ -1,8 +1,8 @@
-import "./About.css";
+import "./Recipes.css";
 import Nav from "../Nav/Nav";
 import HeaderNav from "../HeaderNav/HeaderNav";
 
-function About({ isLoggedIn, handleSignIn, handleSignOut }) {
+function Recipes({ isLoggedIn, handleSignIn, handleSignOut }) {
   return (
     <>
       <HeaderNav
@@ -12,7 +12,7 @@ function About({ isLoggedIn, handleSignIn, handleSignOut }) {
       />
       <Nav />
       <div className="about">
-        <h1 className="about__title">About Me</h1>
+        <h1 className="about__title">Recipes</h1>
         <p className="about__description">
           I am a software engineer with a passion for creating and building
           applications that help people. I have experience in full-stack
@@ -25,4 +25,4 @@ function About({ isLoggedIn, handleSignIn, handleSignOut }) {
   );
 }
 
-export default About;
+export default Recipes;

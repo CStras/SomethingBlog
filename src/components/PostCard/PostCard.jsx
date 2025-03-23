@@ -4,10 +4,14 @@ import Nav from "../Nav/Nav";
 import HeaderNav from "../HeaderNav/HeaderNav";
 import add from "../../assets/add-btn.svg";
 
-function PostCard({ isLoggedIn }) {
+function PostCard({ isLoggedIn, handleSignIn, handleSignOut }) {
   return (
     <>
-      <HeaderNav isLoggedIn={isLoggedIn} />
+      <HeaderNav
+        isLoggedIn={isLoggedIn}
+        handleSignIn={handleSignIn}
+        handleSignOut={handleSignOut}
+      />
       <Nav />
       <main className="content">
         <section className="posts page__section">
