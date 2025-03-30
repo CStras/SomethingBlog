@@ -8,6 +8,7 @@ const cards = [
   {
     title: "My love of reading",
     author: "Colin Strasser",
+    date: "2/30/2023",
     description:
       "bladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksj ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjddfksd kj",
     url: stock1,
