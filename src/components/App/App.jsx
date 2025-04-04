@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "./App.css";
-import AppContext from "../context/AppContext";
+import AppContext from "../../context/AppContext";
 import About from "../About/About";
 import PostCard from "../PostCard/PostCard";
 import Projects from "../Projects/Projects";
@@ -33,6 +33,8 @@ function App() {
   const handleSignIn = () => {
     setIsLoggedIn(true);
   };
+
+  //add useeffect to check db for new posts and update state
 
   useEffect(() => {
     if (!activeModal) return;
