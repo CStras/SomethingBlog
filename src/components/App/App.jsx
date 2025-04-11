@@ -11,9 +11,16 @@ import LoginModal from "../LoginModal/LoginModal";
 import PostModal from "../PostModal/PostModal";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [activeModal, setActiveModal] = useState("");
   const [currentCard, setCurrentCard] = useState({});
+  const [postItems, setPostItems] = useState([]);
+  const [currentUser, setCurrentUser] = useState({
+    name: "",
+    email: "",
+    avatar: "",
+    _id: "",
+  });
 
   const handleLoginClick = () => {
     setActiveModal("login");
@@ -34,6 +41,57 @@ function App() {
 
   const handleSignIn = () => {
     setIsLoggedIn(true);
+  };
+
+  /* ^^^
+    const handleLogin = (email, password) => {
+    return login({ email, password })
+      .then((res) => {
+        setToken(res.token);
+        return checkToken(res.token);
+      })
+      .then((user) => {
+        setCurrentUser(user);
+        setIsLoggedIn(true);
+        navigate("/");
+        closeActiveModal();
+      })
+      .catch((error) => {
+        console.error("Login failed", error);
+      });
+  };
+  */
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    setCurrentUser({
+      name: "",
+      email: "",
+      avatar: "",
+      _id: "",
+    });
+    localStorage.removeItem("jwt");
+    navigate("/");
+  };
+
+  const onAddPost = ({ title, author, date, description, url }) => {
+    addItem({ title, author, date, description, url })
+      .then((res) => {
+        setPostItems((prevItems) => {
+          return [res, ...prevItems];
+        });
+        closeActiveModal();
+      })
+      .catch(console.error);
+  };
+
+  const handleRegister = ({ name, email, password, avatar }) => {
+    return register({ name, email, password, avatar })
+      .then((data) => {
+        console.log(data);
+        handleLogin(email, password);
+      })
+      .catch(console.error);
   };
 
   //add useeffect to check db for new posts and update state
