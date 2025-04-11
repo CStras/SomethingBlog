@@ -49,18 +49,30 @@ function PostCard({
       <main className="content">
         <section className="posts page__section">
           <section className="cards">
-            <div className="cards__add-post-btn-container">
-              <img
-                onClick={handlePostClick}
-                className="cards__add-post-btn"
-                id="add-post-btn"
-                src={add}
-              />
-            </div>
+            {isLoggedIn && (
+              <div className="cards__add-post-btn-container">
+                <img
+                  onClick={handlePostClick}
+                  className="cards__add-post-btn"
+                  id="add-post-btn"
+                  src={add}
+                />
+              </div>
+            )}
+
             <div className="cards">
-              {cards.map(
-                (card) => (console.log(card), (<ItemCard item={card} />))
-              )}
+              <p>
+                DISCLAIMER: This site is this in production and is being
+                activately worked on. See About tab for link to the current
+                progress
+              </p>
+              {cards.map((item) => (
+                <ItemCard
+                  handlePostClick={handlePostClick}
+                  item={item}
+                  key={item.id}
+                />
+              ))}
             </div>
           </section>
         </section>

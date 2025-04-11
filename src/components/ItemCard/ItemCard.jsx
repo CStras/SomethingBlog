@@ -1,8 +1,12 @@
 import "../PostCard/PostCard.css";
 
-function ItemCard({ item }) {
+function ItemCard({ item, handlePostClick }) {
+  function onCardClick() {
+    handlePostClick(item);
+  }
+
   return (
-    <div className="card">
+    <div className="card" onClick={onCardClick}>
       <div className="card__content">
         <div className="card__title_section">
           <h2 className="card__title">{item.title}</h2>
@@ -12,7 +16,7 @@ function ItemCard({ item }) {
         </div>
         <p className="card__description">{item.description}</p>
       </div>
-      <img className="card__img" src={item.url} />
+      <img className="card__img" src={item.url[0]} />
     </div>
   );
 }

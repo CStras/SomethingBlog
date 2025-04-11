@@ -6,40 +6,15 @@ import stock5 from "../assets/stock5.jpg";
 
 const cards = [
   {
-    title: "My love of reading",
+    title: "It's aliveeeeeeeee! Kinda...",
     author: "Colin Strasser",
-    date: "2/30/2023",
+    date: "4/5/2025",
     description:
-      "bladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksj ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjddfksd kj",
-    url: stock1,
-  },
-  {
-    title: "Why socks and sandals?",
-    author: "Colin Strasser",
-    description:
-      "bladsh jasd faskd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjdfalksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjdfksd kj",
-    url: stock2,
-  },
-  {
-    title: "Zero sugar and Diet sodas",
-    author: "Colin Strasser",
-    description:
-      "bladsh jasd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjdfksd kj",
-    url: stock3,
-  },
-  {
-    title: "Types of candy and why chocolate is the best",
-    author: "Colin Strasser",
-    description:
-      "bladsh jasd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjdfksd kj",
-    url: stock4,
-  },
-  {
-    title: "Dune by Frank Herbert & my understanding",
-    author: "Colin Strasser",
-    description:
-      "bladsh jasd fa ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjd ladsh jasd faskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjdskd falksj dflkaj sdlfkaj sldfj aksdj flaksjdlfkasjdflkj sdk kdsfj skdjf ksdjfksdfksjdfksd kj",
-    url: stock5,
+      "So the site is live on github pages! That is great for a static site but I have much larger plans for this site! As you can see on the tabs above, I want a basic blog, a portfolio, and my recipes all on this hub. I also plan for this to be a growing site describing my experiences in this career and generally talking about the things I've learn or am learning!",
+    url: [
+      "https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ffb937b13-b4ee-4ddc-a117-6dcf03d9b27a_960x548.png",
+    ],
+    id: "1",
   },
 ];
 

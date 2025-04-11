@@ -1,0 +1,52 @@
+.card-modal__img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card-modal__description {
+
+    overflow: hidden;
+    scrollbar-width: thin;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    margin: 10px 0 15px;
+}
+
+.card-modal__author {
+    margin-bottom: 15px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.card-modal__ingredients {
+    max-height: 350px;
+    overflow: scroll;
+    overflow-x: hidden;
+    margin-bottom: 15px;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+.card__btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.card__btn-link {
+    text-decoration: none;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: rgba(0,0,0,1);
+    background-color: rgba(176, 143, 77, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 8px;
+}

@@ -13,13 +13,15 @@ import PostModal from "../PostModal/PostModal";
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeModal, setActiveModal] = useState("");
+  const [currentCard, setCurrentCard] = useState({});
 
   const handleLoginClick = () => {
     setActiveModal("login");
   };
 
-  const handlePostClick = () => {
+  const handlePostClick = (e) => {
     setActiveModal("post");
+    setCurrentCard(e);
   };
 
   const closeActiveModal = () => {
@@ -81,6 +83,7 @@ function App() {
               <Projects
                 closeActiveModal={closeActiveModal}
                 handleLoginClick={handleLoginClick}
+                handlePostClick={handlePostClick}
                 isLoggedIn={isLoggedIn}
                 handleSignIn={handleSignIn}
                 handleSignOut={handleSignOut}
@@ -94,6 +97,7 @@ function App() {
               <Recipes
                 closeActiveModal={closeActiveModal}
                 handleLoginClick={handleLoginClick}
+                handlePostClick={handlePostClick}
                 isLoggedIn={isLoggedIn}
                 handleSignIn={handleSignIn}
                 handleSignOut={handleSignOut}
@@ -126,6 +130,7 @@ function App() {
             isOpen={activeModal === "post"}
             setActiveModal={setActiveModal}
             closeActiveModal={closeActiveModal}
+            card={currentCard}
           />
         )}
       </AppContext.Provider>
