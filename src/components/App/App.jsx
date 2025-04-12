@@ -9,9 +9,10 @@ import Projects from "../Projects/Projects";
 import Recipes from "../Recipes/Recipes";
 import LoginModal from "../LoginModal/LoginModal";
 import PostModal from "../PostModal/PostModal";
+import RegisterModal from "../RegisterModal/RegisterModal";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeModal, setActiveModal] = useState("");
   const [currentCard, setCurrentCard] = useState({});
   const [postItems, setPostItems] = useState([]);
@@ -35,16 +36,7 @@ function App() {
     setActiveModal("");
   };
 
-  const handleSignOut = () => {
-    setIsLoggedIn(false);
-  };
-
-  const handleSignIn = () => {
-    setIsLoggedIn(true);
-  };
-
-  /* ^^^
-    const handleLogin = (email, password) => {
+  const handleSignIn = (email, password) => {
     return login({ email, password })
       .then((res) => {
         setToken(res.token);
@@ -60,9 +52,8 @@ function App() {
         console.error("Login failed", error);
       });
   };
-  */
 
-  const handleLogout = () => {
+  const handleSignOut = () => {
     setIsLoggedIn(false);
     setCurrentUser({
       name: "",
@@ -74,6 +65,15 @@ function App() {
     navigate("/");
   };
 
+  const handleRegister = ({ name, email, password, avatar }) => {
+    return register({ name, email, password, avatar })
+      .then((data) => {
+        console.log(data);
+        handleSignIn(email, password);
+      })
+      .catch(console.error);
+  };
+
   const onAddPost = ({ title, author, date, description, url }) => {
     addItem({ title, author, date, description, url })
       .then((res) => {
@@ -81,15 +81,6 @@ function App() {
           return [res, ...prevItems];
         });
         closeActiveModal();
-      })
-      .catch(console.error);
-  };
-
-  const handleRegister = ({ name, email, password, avatar }) => {
-    return register({ name, email, password, avatar })
-      .then((data) => {
-        console.log(data);
-        handleLogin(email, password);
       })
       .catch(console.error);
   };
@@ -179,6 +170,14 @@ function App() {
         {activeModal === "login" && (
           <LoginModal
             isOpen={activeModal === "login"}
+            setActiveModal={setActiveModal}
+            closeActiveModal={closeActiveModal}
+          />
+        )}
+        {activeModal === "register" && (
+          <RegisterModal
+            isOpen={activeModal === "register"}
+            handleRegister={handleRegister}
             setActiveModal={setActiveModal}
             closeActiveModal={closeActiveModal}
           />
