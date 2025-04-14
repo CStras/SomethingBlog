@@ -10,9 +10,11 @@ import Recipes from "../Recipes/Recipes";
 import LoginModal from "../LoginModal/LoginModal";
 import PostModal from "../PostModal/PostModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
+import AddPostModal from "../AddPostModal/AddPostModal";
+import { addPost } from "../../utils/api";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   const [activeModal, setActiveModal] = useState("");
   const [currentCard, setCurrentCard] = useState({});
   const [postItems, setPostItems] = useState([]);
@@ -30,6 +32,10 @@ function App() {
   const handlePostClick = (e) => {
     setActiveModal("post");
     setCurrentCard(e);
+  };
+
+  const handleAddPostClick = () => {
+    setActiveModal("addPost");
   };
 
   const closeActiveModal = () => {
@@ -75,7 +81,7 @@ function App() {
   };
 
   const onAddPost = ({ title, author, date, description, url }) => {
-    addItem({ title, author, date, description, url })
+    addPost({ title, author, date, description, url })
       .then((res) => {
         setPostItems((prevItems) => {
           return [res, ...prevItems];
@@ -122,6 +128,7 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 handleSignIn={handleSignIn}
                 handleSignOut={handleSignOut}
+                handleAddPostClick={handleAddPostClick}
               />
             }
           />
@@ -188,6 +195,14 @@ function App() {
             setActiveModal={setActiveModal}
             closeActiveModal={closeActiveModal}
             card={currentCard}
+          />
+        )}
+        {activeModal === "addPost" && (
+          <AddPostModal
+            isOpen={activeModal === "addPost"}
+            setActiveModal={setActiveModal}
+            closeActiveModal={closeActiveModal}
+            onAddPost={onAddPost}
           />
         )}
       </AppContext.Provider>

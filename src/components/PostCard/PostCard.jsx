@@ -12,6 +12,7 @@ function PostCard({
   handleSignOut,
   handleLoginClick,
   handlePostClick,
+  handleAddPostClick,
 }) {
   /*              <div className="card">
   <div className="card__content">
@@ -52,7 +53,7 @@ function PostCard({
             {isLoggedIn && (
               <div className="cards__add-post-btn-container">
                 <img
-                  onClick={handlePostClick}
+                  onClick={handleAddPostClick}
                   className="cards__add-post-btn"
                   id="add-post-btn"
                   src={add}

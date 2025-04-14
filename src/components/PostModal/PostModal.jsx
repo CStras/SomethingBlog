@@ -4,13 +4,7 @@ import { FormValidation } from "../../utils/FormValidation";
 import { Link } from "react-router-dom";
 import "./PostModal.css";
 
-const PostModal = ({
-  card,
-  isOpen,
-  setActiveModal,
-  closeActiveModal,
-  handleLogin,
-}) => {
+const PostModal = ({ card, isOpen, closeActiveModal }) => {
   const { values, resetForm, handleChange, errors, isValid } = FormValidation();
 
   return (
