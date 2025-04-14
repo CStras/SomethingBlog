@@ -44,9 +44,17 @@
 ::-webkit-scrollbar {
     width: 8px;
     background-color: transparent;
+
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #888;
+    background-color: rgba(33, 33, 33, 0.8);
     border-radius: 8px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    height: 90%;
 }
