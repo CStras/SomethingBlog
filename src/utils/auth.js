@@ -2,6 +2,16 @@ import { checkRes } from "./api.js";
 
 const baseURL = "http://localhost:3001";
 
+export const register = ({ email, password, name, avatar }) => {
+  return fetch(`${baseURL}/signup`, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({ email, password, name, avatar }),
+  }).then(checkRes);
+};
+
 export const login = ({ email, password }) => {
   return fetch(`${baseURL}/signin`, {
     method: "POST",

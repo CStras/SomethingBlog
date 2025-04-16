@@ -32,8 +32,7 @@ const AddPostModal = ({ isOpen, closeActiveModal, onAddPost }) => {
   };
   // this ^^ may all be bloat as the form doesn't need to be validated at
   // this moment.
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const handleSubmit = () => {
     onAddPost({
       title,
       author,

@@ -11,7 +11,7 @@ import LoginModal from "../LoginModal/LoginModal";
 import PostModal from "../PostModal/PostModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import AddPostModal from "../AddPostModal/AddPostModal";
-import { addPost } from "../../utils/api";
+import { addPost, getPosts } from "../../utils/api";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(true);
@@ -91,7 +91,13 @@ function App() {
       .catch(console.error);
   };
 
-  //add useeffect to check db for new posts and update state
+  useEffect(() => {
+    getPosts()
+      .then((res) => {
+        setPostItems(res);
+      })
+      .catch(console.error);
+  }, []);
 
   useEffect(() => {
     if (!activeModal) return;
@@ -129,6 +135,7 @@ function App() {
                 handleSignIn={handleSignIn}
                 handleSignOut={handleSignOut}
                 handleAddPostClick={handleAddPostClick}
+                postItems={postItems}
               />
             }
           />

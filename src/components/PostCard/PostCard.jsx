@@ -13,6 +13,7 @@ function PostCard({
   handleLoginClick,
   handlePostClick,
   handleAddPostClick,
+  postItems,
 }) {
   /*              <div className="card">
   <div className="card__content">
@@ -67,6 +68,13 @@ function PostCard({
                 activately worked on. See About tab for link to the current
                 progress
               </p>
+              {postItems.map((item) => (
+                <ItemCard
+                  handlePostClick={handlePostClick}
+                  item={item}
+                  key={item.id}
+                />
+              ))}
               {cards.map((item) => (
                 <ItemCard
                   handlePostClick={handlePostClick}
