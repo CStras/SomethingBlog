@@ -25,20 +25,24 @@ const AddPostModal = ({ isOpen, closeActiveModal, onAddPost }) => {
     setDescription(e.target.value);
     console.log(e.target.value);
   };
-  const [url, setUrl] = useState("");
+  const [url, setUrl] = useState([]);
+  const [urlArray, setUrlArray] = useState([]);
   const handleUrlChange = (e) => {
     setUrl(e.target.value);
     console.log(e.target.value);
+    console.log(url);
   };
   // this ^^ may all be bloat as the form doesn't need to be validated at
   // this moment.
   const handleSubmit = () => {
+    setUrlArray((prevURLs) => [...prevURLs, url]);
+
     onAddPost({
-      title,
-      author,
-      date,
-      description,
-      url,
+      title: title,
+      author: author,
+      date: date,
+      description: description,
+      url: [...urlArray, url],
     });
   };
 

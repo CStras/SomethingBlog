@@ -12,7 +12,10 @@ const projects = [
     date: "4/5/2025",
     description:
       "This project is for the final sprint before graduation (sprint 16). We had the option to either create a front-end project or a full stack project and due to time constraints, I moved forward with a front-end project. Due to this only being a front-end project, any atempt at logging in or registering will 'succeed' but will either display that the account was created or just sign you into a fake user account. All other functionality works as long as the page is not refreshed. This project centers around using ReactJS, HTML and CSS. The API used in this project is News API (https://newsapi.org/). This API uses the JSON format for news articles that are trending. We will use this API to make requests based on the searched topic from the user. Note: website can be fully experienced by downloading repo and running *npm run dev* in terminal",
-    url: [fav, newsShot],
+    url: [
+      "https://drive.google.com/file/d/1zsYeoSYgZOkcA2JZX5ilcPTOLizyyPMp/view?usp=sharing",
+      "https://drive.google.com/file/d/1bNDBK_7DSEUlITVyXigXLUi9o-gkBUQv/view?usp=sharing",
+    ],
     id: "p1",
     repoLink: "https://github.com/CStras/se_project_news-explorer",
     siteLink: "https://cstras.github.io/se_project_news-explorer/",

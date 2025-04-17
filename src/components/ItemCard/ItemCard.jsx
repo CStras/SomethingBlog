@@ -16,7 +16,7 @@ function ItemCard({ item, handlePostClick }) {
         </div>
         <p className="card__description">{item.description}</p>
       </div>
-      <img className="card__img" src={item.url[0]} />
+      {item.url && <img className="card__img" src={item.url[0]} />}
     </div>
   );
 }

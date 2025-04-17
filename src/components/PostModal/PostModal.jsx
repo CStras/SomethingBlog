@@ -7,6 +7,13 @@ import "./PostModal.css";
 const PostModal = ({ card, isOpen, closeActiveModal }) => {
   const { values, resetForm, handleChange, errors, isValid } = FormValidation();
 
+  /*{card.url &&
+    card.url.map((item) => {
+      return <img className="card-modal__img" src={item} />;
+    })}*/
+
+  console.log(card);
+
   return (
     <ModalWithForm
       titleText={card.title}
