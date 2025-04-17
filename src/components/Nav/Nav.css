@@ -20,17 +20,24 @@
 
 .posts__link {
     background: transparent;
-    border: none;
     padding: 0;
     border-radius: 5px;
     padding: 3px;
     cursor: pointer;
     text-decoration: none;
     color: rgba(33, 33, 33, 1);
+    box-shadow: 0px 4px 0px 0px rgba(33, 33, 33, 0.8);
+    border: 2px solid rgba(33, 33, 33, 0.8);
 }
 
 .posts__link:hover {
     background: rgba(250, 172, 15, 1);
+}
+
+.posts__link:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 0px 0px rgba(33, 33, 33, 1);
+    border: 2px solid rgba(33, 33, 33, 1);
 }
 
 @media screen and (max-width: 850px) {
@@ -43,8 +50,6 @@
 
     .posts__link {
         margin: 0 auto;
-        border-radius: 0;
-        border-bottom: 3px solid rgba(33, 33, 33, 1);
     }
 
     .posts__nav-link:hover {

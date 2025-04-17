@@ -1,6 +1,6 @@
 import "./AddPostModal.css";
 import { FormValidation } from "../../utils/FormValidation";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const AddPostModal = ({ isOpen, closeActiveModal, onAddPost }) => {
   const { values, resetForm, handleChange, errors, isValid } = FormValidation();
@@ -34,6 +34,16 @@ const AddPostModal = ({ isOpen, closeActiveModal, onAddPost }) => {
   };
   // this ^^ may all be bloat as the form doesn't need to be validated at
   // this moment.
+
+  const [urlList, setUrlList] = useState([{ url: "" }]);
+
+  const AddURL = () => {
+    if (urlList.length < 5) {
+      setUrlList((prevURLs) => [...prevURLs, { url: "" }]);
+    }
+    console.log(urlList);
+  };
+
   const handleSubmit = () => {
     setUrlArray((prevURLs) => [...prevURLs, url]);
 
@@ -94,28 +104,37 @@ const AddPostModal = ({ isOpen, closeActiveModal, onAddPost }) => {
           </label>
           <label htmlFor="description" className="modal__PostLabel">
             Description
-            <input
+            <textarea
               className="modal__PostInput"
               type="text"
               name="description"
               required
               value={description}
               onChange={handleDescriptionChange}
-            />
+            ></textarea>
             <span className="modal__error">{errors.description}</span>
           </label>
-          <label htmlFor="url" className="modal__PostLabel">
-            URL
-            <input
-              className="modal__PostInput"
-              type="url"
-              name="url"
-              value={url}
-              onChange={handleUrlChange}
-            />
-            <span className="modal__error">{errors.url}</span>
-          </label>
+          {urlList.map((singleUrl, index) => {
+            return (
+              <label key={index} htmlFor="url" className="modal__PostLabel">
+                URL
+                <input
+                  className="modal__PostInput"
+                  type="url"
+                  name="url"
+                  value={url}
+                  onChange={handleUrlChange}
+                />
+                <span className="modal__error">{errors.url}</span>
+              </label>
+            );
+          })}
         </form>
+
+        <button className="modal__add-btn" onClick={AddURL}>
+          Add URL
+        </button>
+
         <button
           type="submit"
           className="modal__PostSubmit"
