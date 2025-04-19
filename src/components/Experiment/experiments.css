@@ -1,0 +1,80 @@
+.experiments {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.experiments__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(250, 172, 15, 0.4);
+    border-radius: 15px;
+}
+
+.experiments__title {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 1;
+    margin: 20px;
+    color: rgba(33, 33, 33, 1);
+}
+
+.experiments__description {
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 20px 20px;
+    color: rgba(33, 33, 33, 0.8);
+}
+
+.experiments__add-post-btn-container {
+    padding: 5px 5px 0px 5px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+}
+
+.experiments__add-post-btn {
+    width: 40px;
+    height: 40px;
+    transition: scale 1s linear;
+}
+
+.experiments__add-post-btn:hover {
+    scale: 1.4 1.3;
+}
+
+.experiments__add-post-btn-container:hover {
+    background: radial-gradient(circle, rgba(250, 172, 15, 1), rgba(250, 172, 15, 0));
+}
+
+.experiment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 8px 0px 0px rgba(33, 33, 33, 0.8);
+    border: 3px solid rgba(33, 33, 33, 0.8);
+    border-radius: 3px;
+    padding: 10px;
+    width: 40%;
+    margin: 10px;
+}
+
+.experiment:hover {
+    background: rgba(250, 172, 15, 0.5);
+}
+
+.experiment:active {
+    transform: translateY(4px);
+    box-shadow: 0px 4px 0px 0px rgba(33, 33, 33, 1);
+    border: 3px solid rgba(33, 33, 33, 1);
+}

@@ -4,13 +4,20 @@ import HeaderNav from "../HeaderNav/HeaderNav";
 import recipes from "../../utils/recipes";
 import ItemCard from "../ItemCard/ItemCard";
 
-function Recipes({ isLoggedIn, handleSignIn, handleSignOut, handlePostClick }) {
+function Recipes({
+  isLoggedIn,
+  handleSignIn,
+  handleSignOut,
+  handlePostClick,
+  handleLoginClick,
+}) {
   return (
     <>
       <HeaderNav
         isLoggedIn={isLoggedIn}
         handleSignIn={handleSignIn}
         handleSignOut={handleSignOut}
+        handleLoginClick={handleLoginClick}
       />
       <Nav />
       <div className="recipes">

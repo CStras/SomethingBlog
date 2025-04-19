@@ -10,7 +10,12 @@ function HeaderNav({ isLoggedIn, handleLoginClick }) {
       </Link>
       {!isLoggedIn && (
         <div className="header__profile-login" onClick={handleLoginClick}>
-          <button className="header__profile-signup-btn">Sign in</button>
+          <button
+            onClick={handleLoginClick}
+            className="header__profile-signup-btn"
+          >
+            Sign in
+          </button>
         </div>
       )}
       {isLoggedIn && (

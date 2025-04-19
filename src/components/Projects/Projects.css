@@ -1,0 +1,20 @@
+.projects__link {
+    margin-top: 20px;
+    font-size: 20px;
+    text-decoration: none;
+    color: rgb(33, 33, 33);
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    border: 2px solid rgba(33, 33, 33, 0.8);
+    border-radius: 3px;
+    box-shadow: 0px 4px 0px 0px rgba(33, 33, 33, 0.8);
+}
+
+.projects__link:hover {
+    background: rgba(250, 172, 15, 0.5);
+}
+
+.projects__link:active {
+    transform: translateY(2px);
+    box-shadow: 0px 2px 0px 0px rgba(33, 33, 33, 1);
+    border: 2px solid rgba(33, 33, 33, 1);
+}

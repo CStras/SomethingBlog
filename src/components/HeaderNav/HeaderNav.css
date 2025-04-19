@@ -57,6 +57,7 @@
     background-color: transparent;
     border: none;
     caret-color: transparent;
+    cursor: pointer;
 }
 
 .header__profile-logout {

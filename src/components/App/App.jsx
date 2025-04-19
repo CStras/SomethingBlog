@@ -11,6 +11,7 @@ import LoginModal from "../LoginModal/LoginModal";
 import PostModal from "../PostModal/PostModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import AddPostModal from "../AddPostModal/AddPostModal";
+import Experiment from "../Experiment/experiments";
 import { addPost, getPosts } from "../../utils/api";
 
 function App() {
@@ -36,6 +37,10 @@ function App() {
 
   const handleAddPostClick = () => {
     setActiveModal("addPost");
+  };
+
+  const handleExperimentClick = () => {
+    setActiveModal("experiment");
   };
 
   const closeActiveModal = () => {
@@ -172,6 +177,19 @@ function App() {
             path="/about"
             element={
               <About
+                closeActiveModal={closeActiveModal}
+                handleLoginClick={handleLoginClick}
+                isLoggedIn={isLoggedIn}
+                handleSignIn={handleSignIn}
+                handleSignOut={handleSignOut}
+              />
+            }
+          />
+
+          <Route
+            path="/experiments"
+            element={
+              <Experiment
                 closeActiveModal={closeActiveModal}
                 handleLoginClick={handleLoginClick}
                 isLoggedIn={isLoggedIn}

@@ -14,8 +14,8 @@
 .posts__nav-links {
     display: flex;
     gap: 60px;
-    padding: 10px;
-    border-bottom: 3px solid rgba(33, 33, 33, 1);
+    padding: 10px 10px 15px 10px;
+    border-bottom: 3px solid rgba(33, 33, 33, 0.8);
 }
 
 .posts__link {
