@@ -13,9 +13,10 @@ import RegisterModal from "../RegisterModal/RegisterModal";
 import AddPostModal from "../AddPostModal/AddPostModal";
 import Experiment from "../Experiment/experiments";
 import { addPost, getPosts } from "../../utils/api";
+import { login, register, checkToken, setToken } from "../../utils/auth";
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeModal, setActiveModal] = useState("");
   const [currentCard, setCurrentCard] = useState({});
   const [postItems, setPostItems] = useState([]);
@@ -204,6 +205,7 @@ function App() {
             isOpen={activeModal === "login"}
             setActiveModal={setActiveModal}
             closeActiveModal={closeActiveModal}
+            handleSignIn={handleSignIn}
           />
         )}
         {activeModal === "register" && (

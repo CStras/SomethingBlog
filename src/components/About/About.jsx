@@ -35,6 +35,11 @@ function About({ isLoggedIn, handleSignIn, handleSignOut, handleLoginClick }) {
           Click here to see the website progress!
         </Link>
         <img className="about__photo" src={selfPhoto} />
+        <p>
+          DEV NOTE: last worked on user login/registration. need to fix 'login'
+          funciton on backend 'TypeError: User.findUserByCredentials is not a
+          function'{" "}
+        </p>
       </div>
     </>
   );

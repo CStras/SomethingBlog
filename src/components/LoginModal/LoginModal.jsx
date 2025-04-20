@@ -1,21 +1,18 @@
 import "../ModalWithForm/ModalWithForm.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { FormValidation } from "../../utils/FormValidation";
+import { useState } from "react";
 
 const LoginModal = ({
   isOpen,
   setActiveModal,
   closeActiveModal,
-  handleLogin,
+  handleSignIn,
 }) => {
   const { values, resetForm, handleChange, errors, isValid } = FormValidation();
 
-  const handleReset = () => {
-    resetForm({ email: "", password: "" });
-  };
-
   const handleSubmit = () => {
-    handleLogin(values, handleReset);
+    handleSignIn(values.email, values.password);
   };
 
   return (
