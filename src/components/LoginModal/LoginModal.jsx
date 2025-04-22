@@ -1,7 +1,6 @@
 import "../ModalWithForm/ModalWithForm.css";
 import ModalWithForm from "../ModalWithForm/ModalWithForm";
 import { FormValidation } from "../../utils/FormValidation";
-import { useState } from "react";
 
 const LoginModal = ({
   isOpen,

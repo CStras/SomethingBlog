@@ -1,8 +1,14 @@
 import "./HeaderNav.css";
 import profile from "../../assets/default-profile.png";
 import { Link } from "react-router-dom";
+import AppContext from "../../context/AppContext";
+import { useContext } from "react";
 
-function HeaderNav({ isLoggedIn, handleLoginClick }) {
+function HeaderNav({ isLoggedIn, handleLoginClick, handleSignOut }) {
+  const { avatar } = useContext(AppContext);
+
+  console.log(avatar);
+
   return (
     <header className="header">
       <Link to="/" className="header__title-link">
@@ -20,9 +26,14 @@ function HeaderNav({ isLoggedIn, handleLoginClick }) {
       )}
       {isLoggedIn && (
         <div className="header__profile">
-          <img className="header__profile-img" src={profile}></img>
-          <div className="header__profile-logout">
-            <button className="header__profile-signout-btn">Sign out</button>
+          <img className="header__profile-img" src={avatar || profile}></img>
+          <div className="header__profile-logout" onClick={handleSignOut}>
+            <button
+              className="header__profile-signout-btn"
+              onClick={handleSignOut}
+            >
+              Sign out
+            </button>
           </div>
         </div>
       )}

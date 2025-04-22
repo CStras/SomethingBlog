@@ -7,3 +7,22 @@
   max-width: 1280px;
   margin: 0 auto;
 }
+
+
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+  position: relative;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(33, 33, 33, 0.8);
+  border-radius: 8px;
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar-track-piece {
+  background-color: transparent;
+  height: 90%;
+}

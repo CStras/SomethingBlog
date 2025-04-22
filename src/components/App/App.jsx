@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "./App.css";
@@ -26,6 +26,7 @@ function App() {
     avatar: "",
     _id: "",
   });
+  const navigate = useNavigate();
 
   const handleLoginClick = () => {
     setActiveModal("login");
@@ -38,10 +39,6 @@ function App() {
 
   const handleAddPostClick = () => {
     setActiveModal("addPost");
-  };
-
-  const handleExperimentClick = () => {
-    setActiveModal("experiment");
   };
 
   const closeActiveModal = () => {
@@ -77,10 +74,9 @@ function App() {
     navigate("/");
   };
 
-  const handleRegister = ({ name, email, password, avatar }) => {
-    return register({ name, email, password, avatar })
+  const handleRegister = ({ name, avatar, email, password }) => {
+    return register({ name, avatar, email, password })
       .then((data) => {
-        console.log(data);
         handleSignIn(email, password);
       })
       .catch(console.error);
@@ -128,7 +124,7 @@ function App() {
 
   return (
     <div className="page">
-      <AppContext.Provider value={{ isLoggedIn, setIsLoggedIn }}>
+      <AppContext.Provider value={currentUser}>
         <Routes>
           <Route
             path="/"
@@ -142,6 +138,7 @@ function App() {
                 handleSignOut={handleSignOut}
                 handleAddPostClick={handleAddPostClick}
                 postItems={postItems}
+                currentUser={currentUser}
               />
             }
           />
@@ -156,6 +153,7 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 handleSignIn={handleSignIn}
                 handleSignOut={handleSignOut}
+                currentUser={currentUser}
               />
             }
           />
@@ -170,6 +168,7 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 handleSignIn={handleSignIn}
                 handleSignOut={handleSignOut}
+                currentUser={currentUser}
               />
             }
           />
@@ -183,6 +182,7 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 handleSignIn={handleSignIn}
                 handleSignOut={handleSignOut}
+                currentUser={currentUser}
               />
             }
           />
@@ -196,6 +196,7 @@ function App() {
                 isLoggedIn={isLoggedIn}
                 handleSignIn={handleSignIn}
                 handleSignOut={handleSignOut}
+                currentUser={currentUser}
               />
             }
           />

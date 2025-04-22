@@ -81,6 +81,7 @@
     border: none;
     padding: 0;
     caret-color: transparent;
+    cursor: pointer;
 }
 
 .header__profile-img {

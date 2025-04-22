@@ -10,12 +10,13 @@ const RegisterModal = ({
 }) => {
   const { values, resetForm, handleChange, errors, isValid } = FormValidation();
 
-  const handleReset = () => {
-    resetForm({ email: "", password: "" });
-  };
-
   const handleSubmit = () => {
-    handleRegister(values, handleReset);
+    handleRegister({
+      name: values.name,
+      email: values.email,
+      password: values.password,
+      avatar: values.avatar,
+    });
   };
 
   return (
@@ -29,6 +30,28 @@ const RegisterModal = ({
       formValid={isValid}
       onSubmit={handleSubmit}
     >
+      <label className="modal__label" htmlFor="name">
+        Name
+        <input
+          className="modal__input"
+          type="text"
+          id="name"
+          name="name"
+          minLength="2"
+          maxLength="60"
+          placeholder="Enter Name"
+          onChange={handleChange}
+          value={values.name || ""}
+          required
+        />
+        <span
+          className={`modal__input-error ${
+            errors.name ? "modal__input-error_visible" : ""
+          }`}
+          id="name-error"
+        ></span>
+      </label>
+
       <label className="modal__label" htmlFor="email">
         Email
         <input
@@ -73,6 +96,29 @@ const RegisterModal = ({
           id="password-error"
         >
           {errors.password}
+        </span>
+      </label>
+
+      <label className="modal__label" htmlFor="avatar">
+        Avatar
+        <input
+          className="modal__input"
+          type="avatar"
+          id="avatar"
+          name="avatar"
+          placeholder="Enter avatar URL"
+          minLength="2"
+          onChange={handleChange}
+          value={values.avatar || ""}
+          required
+        />
+        <span
+          className={`modal__input-error ${
+            errors.avatar ? "modal__input-error_visible" : ""
+          }`}
+          id="avatar-error"
+        >
+          {errors.avatar}
         </span>
       </label>
     </ModalWithForm>
