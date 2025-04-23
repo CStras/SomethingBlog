@@ -7,8 +7,6 @@ import { useContext } from "react";
 function HeaderNav({ isLoggedIn, handleLoginClick, handleSignOut }) {
   const { avatar } = useContext(AppContext);
 
-  console.log(avatar);
-
   return (
     <header className="header">
       <Link to="/" className="header__title-link">
