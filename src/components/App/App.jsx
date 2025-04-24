@@ -13,7 +13,13 @@ import RegisterModal from "../RegisterModal/RegisterModal";
 import AddPostModal from "../AddPostModal/AddPostModal";
 import Experiment from "../Experiment/experiments";
 import { addPost, getPosts } from "../../utils/api";
-import { login, register, checkToken, setToken } from "../../utils/auth";
+import {
+  login,
+  register,
+  checkToken,
+  setToken,
+  getToken,
+} from "../../utils/auth";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -99,6 +105,23 @@ function App() {
         setPostItems(res);
       })
       .catch(console.error);
+  }, []);
+
+  useEffect(() => {
+    const jwt = getToken();
+
+    if (jwt) {
+      checkToken(jwt)
+        .then((user) => {
+          setCurrentUser(user);
+          setIsLoggedIn(true);
+        })
+        .catch((err) => {
+          console.error("Token check failed", err);
+        });
+    } else {
+      return console.log("No token found");
+    }
   }, []);
 
   useEffect(() => {

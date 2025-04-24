@@ -19,7 +19,7 @@
 .cards {
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 0 20px;
     justify-content: center;
     align-items: center;
     width: 80vw;
@@ -27,7 +27,6 @@
 
 .cards__add-post-btn-container {
     padding: 5px 5px 0px 5px;
-    margin-bottom: 20px;
     border-radius: 50%;
 }
 
@@ -56,6 +55,7 @@
     width: 70%;
     margin: 10px;
     background: rgba(253, 187, 55, 0.5);
+    transition: transform 0.35s ease-in-out;
 }
 
 .card:hover {
