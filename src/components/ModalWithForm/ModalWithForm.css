@@ -32,8 +32,7 @@
     line-height: 28px;
     margin-bottom: 9px;
     color: rgba(26, 27, 34, 1);
-    height: 32px;
-    
+    overflow: auto;
 }
 
 .modal__close {
