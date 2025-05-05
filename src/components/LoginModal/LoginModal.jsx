@@ -7,11 +7,18 @@ const LoginModal = ({
   setActiveModal,
   closeActiveModal,
   handleSignIn,
+  errorMsg,
 }) => {
   const { values, resetForm, handleChange, errors, isValid } = FormValidation();
 
   const handleSubmit = () => {
     handleSignIn(values.email, values.password);
+  };
+
+  const handleError = (errorMsg) => {
+    if (errorMsg === "Errors: 401") {
+      return "Invalid email or password";
+    }
   };
 
   return (
@@ -71,6 +78,14 @@ const LoginModal = ({
           {errors.password}
         </span>
       </label>
+      <span
+        className={`modal__input-error ${
+          errorMsg ? "modal__input-error_visible" : ""
+        }`}
+        id="error"
+      >
+        {errorMsg === "Errors: 401" ? errorMsg : "Invalid email or password"}
+      </span>
     </ModalWithForm>
   );
 };

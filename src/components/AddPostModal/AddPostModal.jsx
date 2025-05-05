@@ -8,29 +8,23 @@ const AddPostModal = ({ isOpen, closeActiveModal, onAddPost }) => {
   const [title, setTitle] = useState("");
   const handleTitleChange = (e) => {
     setTitle(e.target.value);
-    console.log(e.target.value);
   };
   const [author, setAuthor] = useState("");
   const handleAuthorChange = (e) => {
     setAuthor(e.target.value);
-    console.log(e.target.value);
   };
   const [date, setDate] = useState("");
   const handleDateChange = (e) => {
     setDate(e.target.value);
-    console.log(e.target.value);
   };
   const [description, setDescription] = useState("");
   const handleDescriptionChange = (e) => {
     setDescription(e.target.value);
-    console.log(e.target.value);
   };
   const [url, setUrl] = useState([]);
   const [urlArray, setUrlArray] = useState([]);
   const handleUrlChange = (e) => {
     setUrl(e.target.value);
-    console.log(e.target.value);
-    console.log(url);
   };
   // this ^^ may all be bloat as the form doesn't need to be validated at
   // this moment.
@@ -41,7 +35,6 @@ const AddPostModal = ({ isOpen, closeActiveModal, onAddPost }) => {
     if (urlList.length < 5) {
       setUrlList((prevURLs) => [...prevURLs, { url: "" }]);
     }
-    console.log(urlList);
   };
 
   const handleSubmit = () => {

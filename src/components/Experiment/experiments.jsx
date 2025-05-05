@@ -8,8 +8,7 @@ const Experiment = (
   isLoggedIn,
   handleSignIn,
   handleSignOut,
-  handleLoginClick,
-  handleAddPostClick
+  handleLoginClick
 ) => {
   return (
     <>
@@ -27,16 +26,6 @@ const Experiment = (
             This is an area for all the interesting software technologies and
             techniques I am excited about!
           </p>
-          {isLoggedIn && (
-            <div className="experiments__add-post-btn-container">
-              <img
-                onClick={handleAddPostClick}
-                className="experiments__add-post-btn"
-                id="add-post-btn"
-                src={add}
-              />
-            </div>
-          )}
         </div>
         <div className="experiment">
           <FlipCard />

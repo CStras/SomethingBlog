@@ -14,6 +14,9 @@ function PostCard({
   handlePostClick,
   handleAddPostClick,
   postItems,
+  card,
+  handleDeletePost,
+  currentUser,
 }) {
   /*              <div className="card">
   <div className="card__content">
@@ -50,7 +53,7 @@ function PostCard({
       <Nav />
       <main className="content">
         <section className="posts page__section">
-          {isLoggedIn && (
+          {currentUser.admin && (
             <div className="cards__add-post-btn-container">
               <img
                 onClick={handleAddPostClick}
@@ -72,6 +75,8 @@ function PostCard({
                 handlePostClick={handlePostClick}
                 item={item}
                 key={item.id}
+                card={card}
+                handleDeletePost={handleDeletePost}
               />
             ))}
             {cards.map((item) => (

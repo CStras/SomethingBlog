@@ -4,7 +4,13 @@ import HeaderNav from "../HeaderNav/HeaderNav";
 import selfPhoto from "../../assets/aboutPic.jpg";
 import { Link } from "react-router-dom";
 
-function About({ isLoggedIn, handleSignIn, handleSignOut, handleLoginClick }) {
+function About({
+  isLoggedIn,
+  handleSignIn,
+  handleSignOut,
+  handleLoginClick,
+  currentUser,
+}) {
   return (
     <>
       <HeaderNav
@@ -17,13 +23,15 @@ function About({ isLoggedIn, handleSignIn, handleSignOut, handleLoginClick }) {
       <div className="recipes">
         <div className="recipes__header-content">
           <h1 className="about__title">About Me</h1>
-          <p className="about__description">
-            I am a software engineer with a passion for creating and building
-            applications that help people. I have experience in full-stack
-            development, and I am always looking to learn new technologies and
-            improve my skills. I am excited to work on projects that challenge
-            me and allow me to grow as a developer.
-          </p>
+          {currentUser && (
+            <p className="about__description">
+              I am a software engineer with a passion for creating and building
+              applications that help people. I have experience in full-stack
+              development, and I am always looking to learn new technologies and
+              improve my skills. I am excited to work on projects that challenge
+              me and allow me to grow as a developer.
+            </p>
+          )}
         </div>
       </div>
       <div className="about__content">
@@ -32,14 +40,17 @@ function About({ isLoggedIn, handleSignIn, handleSignOut, handleLoginClick }) {
           target="_blank"
           to="https://github.com/CStras/SomethingBlog"
         >
-          Click here to see the website progress!
+          Click here to see the website Github!
         </Link>
+        <Link
+          className="about__link"
+          target="_blank"
+          to="https://www.linkedin.com/in/colin-strasser2000/"
+        >
+          LinkedIn
+        </Link>
+        <p className="about__description">Email : cstrassergh@gmail.com</p>
         <img className="about__photo" src={selfPhoto} />
-        <p>
-          DEV NOTE: last worked on user login/registration. need to fix 'login'
-          funciton on backend 'TypeError: User.findUserByCredentials is not a
-          function'{" "}
-        </p>
       </div>
     </>
   );

@@ -20,4 +20,14 @@ function addPost({ title, author, date, description, url }) {
   }).then(checkRes);
 }
 
-export { checkRes, addPost, getPosts };
+function deletePost(cardId) {
+  return fetch(`${baseUrl}/posts/${cardId}`, {
+    method: "DELETE",
+    headers: {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${getToken()}`,
+    },
+  }).then(checkRes);
+}
+
+export { checkRes, addPost, getPosts, deletePost };

@@ -12,7 +12,7 @@ import PostModal from "../PostModal/PostModal";
 import RegisterModal from "../RegisterModal/RegisterModal";
 import AddPostModal from "../AddPostModal/AddPostModal";
 import Experiment from "../Experiment/experiments";
-import { addPost, getPosts } from "../../utils/api";
+import { addPost, getPosts, deletePost } from "../../utils/api";
 import {
   login,
   register,
@@ -24,6 +24,7 @@ import {
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [activeModal, setActiveModal] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
   const [currentCard, setCurrentCard] = useState({});
   const [postItems, setPostItems] = useState([]);
   const [currentUser, setCurrentUser] = useState({
@@ -51,6 +52,16 @@ function App() {
     setActiveModal("");
   };
 
+  const handleDeletePost = (_id) => {
+    deletePost(_id)
+      .then(() => {
+        setPostItems(postItems.filter((item) => item._id !== currentCard._id));
+        setCurrentCard({});
+        closeActiveModal();
+      })
+      .catch(console.error);
+  };
+
   const handleSignIn = (email, password) => {
     return login({ email, password })
       .then((res) => {
@@ -65,6 +76,7 @@ function App() {
       })
       .catch((error) => {
         console.error("Login failed", error);
+        setErrorMsg(error); //set useState to show error message within modal
       });
   };
 
@@ -120,7 +132,7 @@ function App() {
           console.error("Token check failed", err);
         });
     } else {
-      return console.log("No token found");
+      return;
     }
   }, []);
 
@@ -177,6 +189,7 @@ function App() {
                 handleSignIn={handleSignIn}
                 handleSignOut={handleSignOut}
                 currentUser={currentUser}
+                handleAddPostClick={handleAddPostClick}
               />
             }
           />
@@ -230,6 +243,7 @@ function App() {
             setActiveModal={setActiveModal}
             closeActiveModal={closeActiveModal}
             handleSignIn={handleSignIn}
+            errorMsg={errorMsg}
           />
         )}
         {activeModal === "register" && (
@@ -246,6 +260,8 @@ function App() {
             setActiveModal={setActiveModal}
             closeActiveModal={closeActiveModal}
             card={currentCard}
+            handleDeletePost={handleDeletePost}
+            currentUser={currentUser}
           />
         )}
         {activeModal === "addPost" && (

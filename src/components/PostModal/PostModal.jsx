@@ -4,14 +4,26 @@ import { FormValidation } from "../../utils/FormValidation";
 import { Link } from "react-router-dom";
 import "./PostModal.css";
 
-const PostModal = ({ card, isOpen, closeActiveModal }) => {
+const PostModal = ({
+  card,
+  isOpen,
+  closeActiveModal,
+  handleDeletePost,
+  currentUser,
+}) => {
   const { values, resetForm, handleChange, errors, isValid } = FormValidation();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    handleDeletePost(card._id);
+  };
 
   return (
     <ModalWithForm
       titleText={card.title}
       closeActiveModal={closeActiveModal}
       isOpen={isOpen}
+      onSubmit={handleSubmit}
     >
       <div className="card-modal__author">
         {card.author} {card.date || ""}
@@ -20,6 +32,8 @@ const PostModal = ({ card, isOpen, closeActiveModal }) => {
         card.url.map((item) => {
           return <img className="card-modal__img" src={item} />;
         })}
+
+      {currentUser.admin && <button onClick={handleSubmit}>Delete</button>}
       <p className="card-modal__description">{card.description}</p>
 
       {card.ingredients && (

@@ -6,6 +6,17 @@ import stock5 from "../assets/stock5.jpg";
 
 const cards = [
   {
+    title: "Updates and Coding Challenge!",
+    author: "Colin Strasser",
+    date: "5/5/2025",
+    description:
+      "Well, it's been a month so let me catch you up on what I've been working on. I have finished the backend of the site and I occtionally update the frontend styles. I am currently learning Go and have started to dabble in game dev! I am debating on whether I should host the site on Google Cloud or keep it as a frontend hosted on Github. The pros outweigh the cons but from a financial standpoint, I do not believe that paying for the hosting is worth it when I expect less than 10 people to visit per month. On that note, please navigate to the About section and find my email or LinkedIn to contact me with your thoughts! I would love to flesh out this site with all the half-baked plans I've laid out but I need to use my time effectively. On another note, I got accepted into a coding challenge from a company called 'Meedly'! It will be a 3 week challenge with 4 others and we will work as a team to solve real-world problems. This is something I am excited for and I will keep you updated on how it goes!",
+    url: [
+      "https://media.istockphoto.com/id/1867252232/vector/looking-time-stylish-businessman-in-a-suit-watching-time.jpg?s=1024x1024&w=is&k=20&c=0gycd1CToJHPcsbe4s7BJjz_-w9jqZ8nQi2H03JvYsc=",
+    ],
+    id: "2",
+  },
+  {
     title: "It's aliveeeeeeeee! Kinda...",
     author: "Colin Strasser",
     date: "4/5/2025",
