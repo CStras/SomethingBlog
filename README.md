@@ -6,7 +6,9 @@ Link:
 **NOTE** site is yet to pass into deployment so all you will see is a template to what it will look like!
 https://cstras.github.io/SomethingBlog/
 
-Current goal: Add post card model and implement submittion process
+Backend: https://github.com/CStras/SomethingBack
+
+Current goal: Cloud Deployment
 
 Goals:
 
@@ -14,8 +16,8 @@ Goals:
 
 -Add routes tab (home, about, projects, recipes) (DONE)
 
--Add modals for viewing full posts and adding posts. 
+-Add modals for viewing full posts and adding posts. (DONE)
 
--Set up backend for posts library and user data
+-Set up backend for posts library and user data (DONE)
 
--Add user interactions. Likes, comments, reactions, etc
+-Add user interactions: Likes, comments, reactions, etc
