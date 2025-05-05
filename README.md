@@ -6,6 +6,8 @@ Link:
 **NOTE** site is yet to pass into deployment so all you will see is a template to what it will look like!
 https://cstras.github.io/SomethingBlog/
 
+Backend: https://github.com/CStras/SomethingBack
+
 Current goal: Cloud Deployment
 
 Goals:
