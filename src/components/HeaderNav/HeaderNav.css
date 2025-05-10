@@ -91,3 +91,16 @@
     margin-right: 10px;
     object-fit: cover;
 }
+
+@media screen and (max-width: 355px) {
+    .header {
+        flex-direction: column;
+    }
+   
+    .header__title {
+        font-size: 28px;
+    }
+    .header__profile-signup-btn {
+        font-size: 16px;
+    }
+}

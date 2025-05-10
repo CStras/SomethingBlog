@@ -147,10 +147,11 @@
     .card__title_section {
         flex-direction: column;
         align-items: center;
+        width: 100%;
     }
 
     .card__content {
-        width: 250px;
+        width: 100%;
         align-items: center;
     }
 
@@ -158,13 +159,17 @@
         margin: 15px 0 0 0;
         align-items: center;
         max-height: 150px;
+        width: 100%;
     }
 
     .card__img {
         margin-bottom: 15px;
+        width: 90%;
+        height: 25%;
     }
 
     .card__title {
         margin: 0 0 10px;
+        width: 100%;
     }
 }
